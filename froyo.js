@@ -6,15 +6,8 @@ const userInputString = prompt(
   const stringArray = userInputString.split(", ");
   console.log(stringArray);
 
-
-  const createObject = (key, value) => {
-    const obj = {};
-    return obj;
-  };
-
-
   const addValues = (obj, key) => {
-    const order = createObject();
+    const order = {};
     for (let i = 0; i < stringArray.length; i++) {
        if (order.hasOwnProperty(stringArray[i]) === false) {
         order[stringArray[i]] = 1;
@@ -26,4 +19,4 @@ const userInputString = prompt(
  const completeOrder = addValues();
 
 
-  console.log(completeOrder);
+ console.log(completeOrder);
